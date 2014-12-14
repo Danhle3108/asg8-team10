@@ -31,7 +31,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener,
     private JFrame mainFrame = null;
     private JPanel subPanel = null;
     private DrawPanel drawPanel = null;
-    private JButton clearButton, leaveButton;
+    private JButton clearButton, leaveButton, selectButton;
     private final Random random = new Random(System.currentTimeMillis());
     private final Font defaultFont = new Font("Helvetica", Font.PLAIN, 12);
     private final Color drawColor = selectColor();
@@ -282,6 +282,9 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener,
         leaveButton = new JButton("Leave");
         leaveButton.setFont(defaultFont);
         leaveButton.addActionListener(this);
+        selectButton = new JButton("Select");
+        selectButton.setFont(defaultFont);
+        SelectButton.addActionListener(this);
         subPanel.add("South", clearButton);
         subPanel.add("South", leaveButton);
         mainFrame.getContentPane().add("South", subPanel);
