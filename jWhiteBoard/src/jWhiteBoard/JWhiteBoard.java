@@ -712,7 +712,7 @@ public class JWhiteBoard extends ReceiverAdapter implements ActionListener,
 				return;
 			Color col = new Color(c.rgb);
 			gr.setColor(col);
-			gr.fillOval(c.x, c.y, 10, 10);
+			gr.fillOval(c.x, c.y, c.iBrushsize, c.iBrushsize);
 			repaint();
 			if (state != null) {
 				synchronized (state) {
